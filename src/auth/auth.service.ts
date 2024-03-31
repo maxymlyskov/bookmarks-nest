@@ -7,7 +7,9 @@ export class AuthService {
     constructor(private prisma: PrismaService) { }
 
     async login() {
-        return 'signin'
+        return {
+            message: 'login'
+        }
     }
 
     async signup() {
