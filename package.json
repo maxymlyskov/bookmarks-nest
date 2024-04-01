@@ -18,7 +18,10 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "swc": "nest start --builder swc --watch"
+    "swc": "nest start --builder swc --watch",
+    "db:dev:rm": "docker compose rm dev-db -s -f -v" ,
+    "db:dev:up": "docker compose up dev-db -d",
+    "db:dev:restart": "yarn db:dev:rm && yarn db:dev:up"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
