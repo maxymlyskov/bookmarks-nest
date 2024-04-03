@@ -9,7 +9,7 @@ import { AuthDto } from "./dto";
 export class AuthService {
     constructor(private prisma: PrismaService) { }
 
-    async login(dto: AuthDto) {
+    async signin(dto: AuthDto) {
         //find user by email
         const user = await this.prisma.user.findUnique({
             where: {
